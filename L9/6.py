@@ -1,11 +1,12 @@
-def i2s(n, p):
-	s = ''
+def setun(n):
+	a = ['0', '1', 'i']
+	b = ''
 	while n:
-		d = n % p
-		s = str(d) + s
-		n = n // p
-	return s
+		d = n % 3
+		if d == 2:
+			n = n + 3
+		b = a[d] + b
+		n = n // 3
+	return n
 	
-x = i2s(56, 3)
-
-# Ну его нафиг. Еще и симметричная система. Я спать!
+print(setun(56))
